@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent implements OnInit {
-
+showNavBar:boolean = true;
+scrollBar?:string;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  toogleHideNav(){
+    this.showNavBar = !this.showNavBar;
+    if (!this.showNavBar){
+      window.document.body.style.overflowY='hidden';
+    }else{
+      window.document.body.style.overflowY='';
+    }
+  }
 }

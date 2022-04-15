@@ -132,3 +132,30 @@ body {
         }
     }
 }
+
+/**--------------Buttons----------------**/
+
+.btn-nav-toogle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    .btn{
+        margin:20px 15px 0 0;
+        width: 35px;
+        height: 35px;
+        border:none;
+        border-radius: 50px;
+        background-color: #149ddd;
+        color:white;
+        
+        fa-icon{
+            font-size:20px;
+            font-weight:bold;
+        }
+        
+        &:hover{
+            cursor: pointer;
+        }
+        
+    }
+}

@@ -1,8 +1,10 @@
-<div class="container-hero">
+<div class="container-hero" >
     <div class='hero1'>
-        
         <p>Mauro Calvo <span>Developer</span></p>
-        
+        <app-button-nav (showNavBar)="toogleHideNav()"></app-button-nav>
     </div>
     <div class='hero2'></div>
+    <app-navigation [showing]="showNavBar"></app-navigation>
 </div>
+
+
