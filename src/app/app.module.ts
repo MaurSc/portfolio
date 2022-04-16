@@ -8,13 +8,15 @@ import { HeroComponent } from './components/hero/hero.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ButtonNavComponent } from './components/button-nav/button-nav.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroComponent,
     NavigationComponent,
-    ButtonNavComponent
+    ButtonNavComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
