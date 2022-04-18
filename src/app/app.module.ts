@@ -9,6 +9,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ButtonNavComponent } from './components/button-nav/button-nav.component';
 import { AboutComponent } from './components/about/about.component';
+import { ResumeComponent } from './components/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AboutComponent } from './components/about/about.component';
     HeroComponent,
     NavigationComponent,
     ButtonNavComponent,
-    AboutComponent
+    AboutComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,

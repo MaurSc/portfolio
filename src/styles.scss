@@ -1,6 +1,7 @@
 /**--------------Globals----------------**/
 html {
     box-sizing: border-box;
+    //user-select: none;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -8,6 +9,7 @@ html {
 
 body h1 h2 h3 p{
     font-family: "Open Sans", sans-serif;
+    
 }
 
 /**--------------Hero----------------**/
@@ -149,7 +151,7 @@ body h1 h2 h3 p{
         }
     }
     .about__skills{
-        font-size: 28px;
+        font-size: 24px;
         font-weight: bold;
         margin-bottom: 16px;
         margin-top:0;
@@ -213,7 +215,56 @@ body h1 h2 h3 p{
     -webkit-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
     -moz-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
     box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
+       
+    h3{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0 15px 0;
+    position: relative;
+    color: #173b6c;
+    }
+    .resume__item{
+        border-left: 2px solid #1f5297;
+        padding:0 0 15px 15px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50px;
+            left: -9px;
+            top: 0;
+            background: #fff;
+            border: 2px solid #1f5297;
+        }
+        &:last-child{
+            padding-bottom: 0;
+        }
+            
+        .resume__item-site{
+            margin:0 0 15px 0;
+            font-size:23px;
+
+        }
+        .resume__item-date{
+            color:rgba(#040b14, .5);
+            margin-top: 0;
+        }
+        .resume__item-description{
+            font-size:16px;
+
+            span{
+                font-weight:bold;
+            }
+        }
+        .certificado{
+            
+        }
+    }
 }
+
+
 
 /**--------------Buttons----------------**/
 .btn-nav-toogle{
