@@ -10,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ButtonNavComponent } from './components/button-nav/button-nav.component';
 import { AboutComponent } from './components/about/about.component';
 import { ResumeComponent } from './components/resume/resume.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ResumeComponent } from './components/resume/resume.component';
     NavigationComponent,
     ButtonNavComponent,
     AboutComponent,
-    ResumeComponent
+    ResumeComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
