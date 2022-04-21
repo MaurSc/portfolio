@@ -1,4 +1,6 @@
-/**--------------Globals----------------**/
+/*============================
+    Globals
+==============================*/
 html {
     box-sizing: border-box;
     //user-select: none;
@@ -6,11 +8,12 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
-body h1 h2 h3 p{
-    font-family: "Open Sans", sans-serif;
-    
+body{
+    color:#212431;
+    font-family: "Open Sans", sans-serif
 }
+
+    
 .container {
     margin: 0 auto;
     max-width: 90%;
@@ -22,8 +25,9 @@ body h1 h2 h3 p{
     -moz-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
     box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
 }
-
-/**--------------Hero----------------**/
+/*============================
+    Hero
+==============================*/
 
 .container-hero{
     .hero1 {
@@ -65,7 +69,9 @@ body h1 h2 h3 p{
     }
     
 }
-/**--------------Navigation----------------**/
+/*============================
+    Navigation
+==============================*/
 
 .navigation{
     background-color: #040b14;
@@ -144,25 +150,18 @@ body h1 h2 h3 p{
         }
     }
 }
-/**--------------About----------------**/
+/*============================
+    About
+==============================*/
 .about{
-    margin: 0 auto;
-    max-width: 90%;
-    padding: 20px;
-    margin-bottom: 30px;
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
-    -moz-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
-    box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
     .about__description{
         p{
-            font-size:20px;
+            font-size:18px;
             line-height: 1.2;
         }
     }
     .about__skills{
-        font-size: 24px;
+        font-size: 22px;
         font-weight: bold;
         margin-bottom: 16px;
         margin-top:0;
@@ -175,7 +174,7 @@ body h1 h2 h3 p{
             justify-content: flex-start;
             color:rgba(#040b14, .5);
             p{
-                font-size: 24px; 
+                font-size: 20px; 
                 margin: 0 10px 0 10px;
             }
             &:after {
@@ -190,7 +189,7 @@ body h1 h2 h3 p{
                 padding-left: 0;
                 li{
                 list-style: none;
-                font-size:20px;
+                font-size:18px;
                 font-weight: normal;
                 color:black;
                 padding-bottom:5px;
@@ -214,12 +213,13 @@ body h1 h2 h3 p{
             
     }
 }
-
-/**--------------Resume-----------------**/
+/*============================
+    Resume
+==============================*/
 .resume{
        
-    h3{
-    font-size: 24px;
+    h3 h4{
+    font-size: 22px;
     font-weight: bold;
     margin: 20px 0 15px 0;
     position: relative;
@@ -255,24 +255,26 @@ body h1 h2 h3 p{
         }
         .resume__item-description{
             font-size:16px;
-
+            line-height: 1.3;
             span{
                 font-weight:bold;
             }
         }
     }
 }
-/**--------------Project----------------**/
+/*============================
+    Project
+==============================*/
 .project{
     
     .projects{
 
         .project__introduction{
-            font-size:18px;
+            font-size:16px;
             line-height: 1;
         }
         .project__introduction-subtitle{
-            font-size: 24px;
+            font-size: 22px;
             text-align: center;
             font-weight: bold;
             margin: 20px 0 15px 0;
@@ -308,7 +310,7 @@ body h1 h2 h3 p{
                         .margiin{
                                 font-size:26px;
                                 font-weight:bold;
-                                transition: all 1s ease;
+                                transition: all 0.8s ease-in-out;
                             }
                     }
                     h5{
@@ -319,7 +321,7 @@ body h1 h2 h3 p{
                     }
                     .text_after{
                         opacity: 0;
-                        font-size:19px;
+                        font-size:16px;
                         font-weight:bold;
                         margin:0;
                         transition: all 2s ease-in-out;
@@ -332,12 +334,12 @@ body h1 h2 h3 p{
                     }
                     .project__card-btn{
                         display: flex;
-                        opacity: 0;
+                        opacity:1;
                         transition: all 2s ease-in-out;
                         .btn-project{
                             flex-basis: 50%;
                             padding:5px 0 5px 0;
-                            transition: all 7s ease-in;
+                            transition: all 10s ease-in;
                             a{
                                 color: #3568ab;
                                 text-decoration:none;
@@ -389,6 +391,15 @@ body h1 h2 h3 p{
             
         }
     }
+
+    /****************
+        Media-
+    ****************/
+    @media (max-width: 768px){
+        .project__card-btn{
+            opacity: 1;
+        }
+    }
 }
 
 /*
@@ -403,7 +414,58 @@ body h1 h2 h3 p{
     }
 }
 */
-/**--------------Buttons----------------**/
+/*============================
+    Contact
+==============================*/
+.contact{
+    .contact__description{
+        font-size:16px;
+        line-height: 1;
+    }
+    
+    .contact__methods{
+        font-size:16px;
+        line-height: 1;
+        .contact__methods-box{
+            display: flex;
+            align-items:center;
+            margin-bottom: 18px;
+            fa-icon{
+                font-size: 18px;
+                display: inline-block;
+                background: #212431;
+                color: #fff;
+                line-height: 1;
+                padding: 8px 0;
+                border-radius: 50%;
+                text-align: center;
+                width: 36px;
+                height: 36px;
+                transition: 0.3s;
+                &:hover{
+                    cursor: pointer;
+                    background: #149ddd;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+            .contact__methods-text{
+                
+                p{
+                    margin:0 0 0 10px;
+
+                    &:first-child{
+                        padding-bottom:4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*============================
+    Buttons
+==============================*/
 .btn-nav-toogle{
     position: fixed;
     top: 0;
@@ -428,8 +490,9 @@ body h1 h2 h3 p{
         
     }
 }
-
-/**--------------Section-title----------------**/
+/*============================
+    Section-title
+==============================*/
 .section-title h2 {
     font-size: 32px;
     font-weight: bold;
