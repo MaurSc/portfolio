@@ -1,10 +1,28 @@
 <div class="container-hero" >
-    <div class='hero1'>
-        <p>Mauro Calvo <span>Developer</span></p>
-        <app-button-nav (showNavBar)="toogleHideNav()"></app-button-nav>
+    <div 
+        class='hero1 '
+        
+    >
+        <div class="name">
+            <p><i>&lt;</i>Mauro Calvo<i>&#47;&gt;</i></p>
+        </div> 
+        <app-button-nav [hideNavFL]="hideNavFL" (showNavBar)="toogleHideNav()"></app-button-nav>
+        <div class=" btn__up-active"
+            inViewport
+            [inViewportOptions]="{ threshold: [0] }"
+            (inViewportAction)="onIntersection($event)"
+            >
+            <button 
+                class="btn"
+            >
+                <a href="#"> <fa-icon [icon]="arrowUp"> </fa-icon> </a>
+            </button>
+
+        </div>
+        
     </div>
     <div class='hero2'></div>
-    <app-navigation [showing]="showNavBar"></app-navigation>
+    <app-navigation (hideNavFL)="onHideNavFL()" [showing]="showNavBar"></app-navigation>
 </div>
 
 

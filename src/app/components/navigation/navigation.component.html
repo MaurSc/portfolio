@@ -20,23 +20,33 @@
         </a>
     </div>
     <nav class="nav-links">
-        <a href="#">
+        <a 
+            href="#" 
+            (click)="hideNavForL($event)">
             <fa-icon [icon]="home"></fa-icon> 
             Home 
         </a>
-        <a href="#">
+        <a 
+            href="#about"  
+            (click)="hideNavForL($event)">
             <fa-icon [icon]="about"></fa-icon> 
             About 
         </a>
-        <a href="#">
+        <a 
+            href="#resume"  
+            (click)="hideNavForL($event)">
             <fa-icon [icon]="resume"></fa-icon> 
             Resume 
         </a>
-        <a href="#">
+        <a 
+            href="#projects"  
+            (click)="hideNavForL($event)">
             <fa-icon [icon]="projects"></fa-icon> 
             Projects 
         </a>
-        <a href="#">
+        <a 
+            href="#contact" 
+            (click)="hideNavForL($event)">
             <fa-icon [icon]="contact"></fa-icon> 
             Contact 
         </a>

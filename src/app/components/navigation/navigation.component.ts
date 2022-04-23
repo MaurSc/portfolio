@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit, Input, OnChanges, SimpleChanges, SimpleChange} from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChange, Output, EventEmitter, ViewChild, ElementRef} from '@angular/core';
 
 import { faLinkedin,faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faHouseChimney, faUser, faFile, faCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -26,11 +26,11 @@ import { faHouseChimney, faUser, faFile, faCode, faEnvelope } from '@fortawesome
 })
 export class NavigationComponent implements OnInit, OnChanges {
   @Input() showing!: boolean;
+  @Output() hideNavFL=new EventEmitter();
 
-  changeLog: string[] = [];
   linkedIn = faLinkedin;
   github = faGithub;
-  
+  active:boolean=true;  
   navBar:string =this.showing? 'show' : 'hide';;
 
   home = faHouseChimney;
@@ -40,6 +40,8 @@ export class NavigationComponent implements OnInit, OnChanges {
   contact = faEnvelope;
 
   constructor() { }
+
+  
 
   ngOnInit(): void {
   
@@ -57,5 +59,9 @@ export class NavigationComponent implements OnInit, OnChanges {
   }
   onHiddenNav(){
     this.navBar = this.showing? 'show' : 'hide';
+  }
+  hideNavForL(e:any){
+    e.target
+    this.hideNavFL.emit();
   }
 }

@@ -3,6 +3,7 @@
 ==============================*/
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
     //user-select: none;
 }
 *, *:before, *:after {
@@ -10,9 +11,11 @@ html {
 }
 body{
     color:#212431;
-    font-family: "Open Sans", sans-serif
+    font-family: "Open Sans", sans-serif;
+    a{
+        text-decoration: none
+    }
 }
-
     
 .container {
     margin: 0 auto;
@@ -40,21 +43,64 @@ body{
         background-image: url(../src/assets/images/hero.png);
         background-size: cover;
         background-repeat:no-repeat;
-        background-position:center center;
-        p{
-            margin-left:5px;
-            display: block;
-            font-size: 25px;
-            font-weight: bold;
-            color:white;
-            span{
-                font-size: 20px;
-                display: block;
-                text-align: center;
-                margin-left:15px;
+        background-position:center center; ;
+        
+        .name{
+            
+            p{
+                font-weight: bold;
+                font-size:21px;
+                color:white;
+                transform: translate(-5px,105px);
+                border-right: 3px solid #18bdec;;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 158px;
+                animation: type 1s steps(11), blink .5s step-end infinite alternate;
+                i{
+                    font-size: 20px; 
+                    font-weight: normal;
+                    color:rgb(236,97,91);
+               }
+            }
+            
+        }
+        .btn__up-active > button{
+            position: fixed;
+            opacity: 1;
+            bottom: 0;
+            right: 0;
+            transition: all 1s ease-in-out;
+            z-index: 2;
+            &.btn{
+                margin-bottom:10px;
+                width: 40px;
+                height: 40px;
+                border:none;
+                border-radius: 50px;
+                background-color: #149ddd;
+                color:white;
+                a{
+                color:white;
+                text-decoration: none;
+                fa-icon{
+                    font-size:24px;
+                    font-weight:bold;
+                }
+                
+                &:hover{
+                    cursor: pointer;
+                }
+                }
+            
             }
         }
+        .btn__up-inActive{
+            opacity: 0;
+        }
+        
     }
+    
     .hero2 {
         position:absolute;
         width: 100%;
@@ -69,6 +115,27 @@ body{
     }
     
 }
+
+/**
+    KEY FRAMES
+**/
+@keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+}
+  @keyframes type {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 /*============================
     Navigation
 ==============================*/
@@ -126,8 +193,7 @@ body{
         align-items:flex-start;
         a{
             margin:0 3px 20px 7px;
-            text-decoration: none;
-            color:white;
+            color:rgba(179,201,230,0.60);
             fa-icon{
                 font-size: 18px;
                 display: inline-block;
@@ -137,13 +203,9 @@ body{
                 transition: 0.3s;
             }
             &:hover{
+                color:white;
                 fa-icon{
                     cursor: pointer;
-                    color: #149ddd;
-                }
-            }
-            &:focus{
-                fa-icon{
                     color: #149ddd;
                 }
             }
@@ -442,12 +504,15 @@ body{
                 width: 36px;
                 height: 36px;
                 transition: 0.3s;
-                &:hover{
+            }
+            &:hover{
+                fa-icon{
                     cursor: pointer;
                     background: #149ddd;
                     color: #fff;
                     text-decoration: none;
                 }
+                
             }
             .contact__methods-text{
                 
@@ -461,6 +526,7 @@ body{
             }
         }
     }
+    
 }
 
 /*============================
@@ -470,15 +536,15 @@ body{
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 2;
     .btn{
         margin:20px 15px 0 0;
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
         border:none;
         border-radius: 50px;
         background-color: #149ddd;
         color:white;
-        
         fa-icon{
             font-size:20px;
             font-weight:bold;
@@ -490,6 +556,8 @@ body{
         
     }
 }
+
+
 /*============================
     Section-title
 ==============================*/
@@ -500,7 +568,7 @@ body{
     margin-top:0;
     position: relative;
     color: #173b6c;
-  }
+}
   .section-title h2::after {
     content: "";
     position: absolute;
