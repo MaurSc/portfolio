@@ -1,6 +1,6 @@
-<div id="projects" class="project container">
+<div class="project container">
     <div class="section-title">
-        <h2>Projects</h2>
+        <h2 id="projects">Projects</h2>
     </div>
     <div class="projects">
         <div class="project__introduction">
@@ -8,8 +8,17 @@
         <div>
         <div>
             <h4 class="project__introduction-subtitle">Lista de proyectos</h4>
-            <div class="project__container">
-                <div class="project__card">
+            
+            <div
+                class="project__container"
+                inViewport
+                [inViewportOptions]="{ threshold: [0] }"
+                (inViewportAction)="onIntersection($event)"    
+            >
+                <div 
+                    class="project__card"
+                    [@enter]='enter'
+                >
                     <div class="project__card-content">
                         <div class="icon" >
                             <fa-icon [icon]="less"></fa-icon>
@@ -30,8 +39,6 @@
                         
                     </div>
                 </div>
-                
-                
             </div>
         </div>
     <div>

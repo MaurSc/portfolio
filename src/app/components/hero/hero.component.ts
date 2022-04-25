@@ -17,6 +17,7 @@ arrowUp = faArrowUp;
 
   ngOnInit(): void {
   }
+
    onIntersection({ target, visible }: { target: Element; visible: boolean }): void {
     this.renderer.addClass(target, visible ? 'btn__up-inActive' : 'btn__up-active');
     this.renderer.removeClass(target, visible ? 'btn__up-active' : 'btn__up-inActive');
@@ -29,8 +30,11 @@ arrowUp = faArrowUp;
     }else{
       window.document.body.style.overflowY='';
     }
+    window.document.body.style.overflowX='hidden';
   }
   onHideNavFL(){
     this.hideNavFL = !this.hideNavFL;
   }
 }
+
+

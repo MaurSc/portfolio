@@ -1,18 +1,35 @@
-<div id="resume" class="resume container">
+<div  class="resume container">
     <div class="section-title">
-        <h2>Resume</h2>
+        <h2 id="resume" >Resume</h2>
     </div>
-        <h3>Employment History</h3>
+    <div
+        [@workH]='workH'
+        inViewport
+        [inViewportOptions]="{ threshold: [0] }"
+        (inViewportAction)="onIntersection('workH',$event)"    
+    >
+        <h3>
+            Employment History
+        </h3>
         <div class="resume__item">
             <h4 class="resume__item-site">Dikter S.A</h4>
             <p  class="resume__item-date">Diciembre/2019 - Actualidad</p>
             <p class="resume__item-description"> <span>Vendedor/cajero</span>
                 <br/>
-                 Mis principales tareas:
+                Mis principales tareas:
                 <br/>
                 La tención y asesoramiento al cliente sobre indumentaria masculina. Tareas referentes a la caja: facturación. Tareas referentes al mantenimiento del local.</p>
         </div>
-        <h3>Education</h3>
+    </div>
+    <div
+    [@education]='education'
+    inViewport
+    [inViewportOptions]="{ threshold: [0] }"
+    (inViewportAction)="onIntersection('education',$event)"
+    >
+        <h3>
+            Education
+        </h3>
         <div class="resume__item">
             <h4 class="resume__item-site">U.A.I</h4>
             <p  class="resume__item-date">2021 - Actualidad</p>
@@ -78,5 +95,8 @@
                 </a>
             </div>
         </div>
+
+    </div>  
+        
 
 </div>

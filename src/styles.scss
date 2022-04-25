@@ -216,12 +216,7 @@ body{
     About
 ==============================*/
 .about{
-    .about__description{
-        p{
-            font-size:18px;
-            line-height: 1.2;
-        }
-    }
+    
     .about__skills{
         font-size: 22px;
         font-weight: bold;
@@ -229,6 +224,11 @@ body{
         margin-top:0;
         position: relative;
         color: #173b6c;
+        .about__description{
+                font-size:18px;
+                line-height: 1.2;
+                color: #040b14;
+        }
         .skills-p{
             border-left: 8px solid;
             display: flex;
@@ -401,7 +401,7 @@ body{
                         .btn-project{
                             flex-basis: 50%;
                             padding:5px 0 5px 0;
-                            transition: all 10s ease-in;
+                            transition: all 7s ease-in;
                             a{
                                 color: #3568ab;
                                 text-decoration:none;
@@ -507,7 +507,6 @@ body{
             }
             &:hover{
                 fa-icon{
-                    cursor: pointer;
                     background: #149ddd;
                     color: #fff;
                     text-decoration: none;
@@ -525,6 +524,12 @@ body{
                 }
             }
         }
+    }
+    .contact__map{
+        iframe{
+            border-radius:30px;
+        }
+       
     }
     
 }
