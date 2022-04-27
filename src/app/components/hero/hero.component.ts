@@ -13,9 +13,10 @@ scrollBar?:string;
 
 arrowUp = faArrowUp;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2) {  }
 
   ngOnInit(): void {
+    window.document.body.style.overflowX='hidden';
   }
 
    onIntersection({ target, visible }: { target: Element; visible: boolean }): void {
@@ -30,7 +31,6 @@ arrowUp = faArrowUp;
     }else{
       window.document.body.style.overflowY='';
     }
-    window.document.body.style.overflowX='hidden';
   }
   onHideNavFL(){
     this.hideNavFL = !this.hideNavFL;

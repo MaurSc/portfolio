@@ -4,12 +4,14 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    //user-select: none;
+    overflow-y: auto;
+    user-select: none;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
 body{
+    margin:0;
     color:#212431;
     font-family: "Open Sans", sans-serif;
     a{
@@ -27,6 +29,10 @@ body{
     -webkit-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
     -moz-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
     box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
+    z-index:-1 ;
+    &:first-child{
+        margin-top:20px;
+    }
 }
 /*============================
     Hero
@@ -51,7 +57,7 @@ body{
                 font-weight: bold;
                 font-size:21px;
                 color:white;
-                transform: translate(-5px,105px);
+                transform: translate(2px,20px);
                 border-right: 3px solid #18bdec;;
                 white-space: nowrap;
                 overflow: hidden;
@@ -116,6 +122,8 @@ body{
     
 }
 
+
+
 /**
     KEY FRAMES
 **/
@@ -143,13 +151,14 @@ body{
 .navigation{
     background-color: #040b14;
     position:fixed;
-    width: 280px;
+    width: 70%;
     height: 100vh;
     top:0;
     left:0;
     bottom:0;
     z-index: 2;
     text-align: center;
+    overflow:auto;
     .nav-image{
         width:90px;
         height: 90px;
@@ -158,7 +167,8 @@ body{
         border-radius:50%;
     }
     .nav-text{
-        font-size: 23px;
+        font-size: 20px;
+        margin:4px 0 4px 0;
         font-weight: bold;
         color:white;
     }
@@ -218,14 +228,14 @@ body{
 .about{
     
     .about__skills{
-        font-size: 22px;
+        font-size: 18px;
         font-weight: bold;
         margin-bottom: 16px;
         margin-top:0;
         position: relative;
         color: #173b6c;
         .about__description{
-                font-size:18px;
+                font-size:14px;
                 line-height: 1.2;
                 color: #040b14;
         }
@@ -236,7 +246,7 @@ body{
             justify-content: flex-start;
             color:rgba(#040b14, .5);
             p{
-                font-size: 20px; 
+                font-size: 16px; 
                 margin: 0 10px 0 10px;
             }
             &:after {
@@ -251,7 +261,7 @@ body{
                 padding-left: 0;
                 li{
                 list-style: none;
-                font-size:18px;
+                font-size:14px;
                 font-weight: normal;
                 color:black;
                 padding-bottom:5px;
@@ -264,7 +274,7 @@ body{
                 span{
                     font-weight: bold; 
                     color: #173b6c;
-                    font-size:22px;
+                    font-size:18px;
                 }
             }
             .backFront-list{
@@ -280,8 +290,8 @@ body{
 ==============================*/
 .resume{
        
-    h3 h4{
-    font-size: 22px;
+    h3{
+    font-size: 18px;
     font-weight: bold;
     margin: 20px 0 15px 0;
     position: relative;
@@ -308,7 +318,7 @@ body{
             
         .resume__item-site{
             margin:0 0 15px 0;
-            font-size:23px;
+            font-size:19px;
 
         }
         .resume__item-date{
@@ -316,7 +326,7 @@ body{
             margin-top: 0;
         }
         .resume__item-description{
-            font-size:16px;
+            font-size:12px;
             line-height: 1.3;
             span{
                 font-weight:bold;
@@ -332,11 +342,11 @@ body{
     .projects{
 
         .project__introduction{
-            font-size:16px;
+            font-size:12px;
             line-height: 1;
         }
         .project__introduction-subtitle{
-            font-size: 22px;
+            font-size: 18px;
             text-align: center;
             font-weight: bold;
             margin: 20px 0 15px 0;
@@ -347,7 +357,8 @@ body{
             .project__card{
                 background-color: rgba(#149ddd,0.23);
                 box-shadow: 3px 10px 15px 12px rgba(179,201,230,0.60);
-                max-width: 360px;
+                max-width: 300px;
+                max-height: 360px;
                 width: 96%;
                 margin:0 auto;
                 border-radius: 10px;
@@ -364,26 +375,26 @@ body{
                         color:#3568ab;
                         
                         fa-icon{
-                            font-size: 20px;
+                            font-size: 17px;
                             padding:0 6px 0 6px;
                             transition: all 2s ease-in-out;
                             
                         }
                         .margiin{
-                                font-size:26px;
+                                font-size:22px;
                                 font-weight:bold;
                                 transition: all 0.8s ease-in-out;
                             }
                     }
                     h5{
-                        font-size:19px;
+                        font-size:15px;
                         font-weight:bold;
                         margin: 15px 0 15px 0;
                         transition: all 2s ease-in-out;
                     }
                     .text_after{
                         opacity: 0;
-                        font-size:16px;
+                        font-size:12px;
                         font-weight:bold;
                         margin:0;
                         transition: all 2s ease-in-out;
@@ -391,7 +402,7 @@ body{
                     }
                     p{
                         margin-top:0;
-                        font-size:16px; 
+                        font-size:12px; 
                         transition: all 2s ease-in-out;
                     }
                     .project__card-btn{
@@ -403,6 +414,7 @@ body{
                             padding:5px 0 5px 0;
                             transition: all 7s ease-in;
                             a{
+                                font-size:16px;
                                 color: #3568ab;
                                 text-decoration:none;
                                 
@@ -453,15 +465,6 @@ body{
             
         }
     }
-
-    /****************
-        Media-
-    ****************/
-    @media (max-width: 768px){
-        .project__card-btn{
-            opacity: 1;
-        }
-    }
 }
 
 /*
@@ -481,19 +484,19 @@ body{
 ==============================*/
 .contact{
     .contact__description{
-        font-size:16px;
+        font-size:14px;
         line-height: 1;
     }
     
     .contact__methods{
-        font-size:16px;
+        font-size:12px;
         line-height: 1;
         .contact__methods-box{
             display: flex;
             align-items:center;
             margin-bottom: 18px;
             fa-icon{
-                font-size: 18px;
+                font-size: 14px;
                 display: inline-block;
                 background: #212431;
                 color: #fff;
@@ -501,8 +504,8 @@ body{
                 padding: 8px 0;
                 border-radius: 50%;
                 text-align: center;
-                width: 36px;
-                height: 36px;
+                width: 30px;
+                height: 30px;
                 transition: 0.3s;
             }
             &:hover{
@@ -514,26 +517,68 @@ body{
                 
             }
             .contact__methods-text{
-                
+                span {
+                    font-weight:bold;
+                    margin: 0 0 4px 10px;
+                }
                 p{
                     margin:0 0 0 10px;
-
-                    &:first-child{
-                        padding-bottom:4px;
-                    }
                 }
             }
         }
     }
     .contact__map{
         iframe{
-            border-radius:30px;
+            border-radius:50px;
         }
        
     }
     
 }
 
+/*============================
+    Footer
+==============================*/
+
+.footer{  
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    z-index: 2;
+    background: #040b14;
+    text-align: center;
+
+    .footer__copyright{
+        font-size: 16px;
+        margin-bottom: 3px;
+    }
+
+    .footer__credits{
+        padding-top: 5px;
+        text-align: center;
+        font-size: 13px;
+        color: #eaebf0;
+        p{
+            margin:0;
+            span{
+                font-weight:bold;
+                font-size:16px;
+            }
+        }
+        
+    }
+}
+@media (max-width: 992px) {
+    .footer {
+      position: static;
+      width: auto;
+      padding-right: 20px 15px;
+    }
+  }
 /*============================
     Buttons
 ==============================*/
@@ -567,7 +612,7 @@ body{
     Section-title
 ==============================*/
 .section-title h2 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 16px;
     margin-top:0;
@@ -585,3 +630,513 @@ body{
     left: 0;
   }
 
+
+
+  /****************************************************************
+    MediaQueries
+*****************************************************************/
+
+/********portrait phones, less than 320px DEFAULT(Mobile First)***********/
+
+/****Small devices (portrait phones, 321--575)***/
+@media only screen and (min-width: 320px){
+
+    .container-hero{
+        .hero1{
+            .name{
+                p{
+                    font-size:27px;
+                    transform: translate(50px,20px);
+                    width: 205px;
+                    animation: type 1s steps(11), blink .5s step-end infinite alternate;
+                    i{
+                        font-size: 27px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+/****Medium devices  (landscape phones, 576 and up)***/
+@media only screen and (min-width: 576px){
+
+    .container-hero{
+        .hero1{
+            .name{
+                p{
+                    font-size:30px;
+                    transform: translate(40px,70px);
+                    width: 230px;
+                    animation: type 1s steps(13), blink .5s step-end infinite alternate;
+                    i{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-nav-toogle{
+        .btn{
+            width: 50px;
+            height: 50px;
+            fa-icon{
+                font-size:30px;
+                font-weight:bold;
+            }
+            
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .navigation{
+        width: 40%;
+        .nav-image{
+            width:100px;
+            height: 100px;
+        }
+        .nav-text{
+            font-size: 24px;
+        }
+        .nav-contact{
+            fa-icon{
+                font-size: 22px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .nav-links{
+            a{
+                fa-icon{
+                    font-size: 22px;
+                    width: 38px;
+                    height: 38px;
+                }
+            }
+        }
+    }
+
+    .about{
+        .about__skills{
+            font-size: 22px;
+            .about__description{
+                    font-size:16px;
+                    line-height: 1.3;
+            }
+            .skills-p{
+                p{
+                    font-size: 18px; 
+                    margin: 0 10px 0 10px;
+                }
+            }
+            .about__skills-soft, .about__skills-hard{
+                
+                .skills-list{
+                    li{
+                    font-size:15px;
+                    }
+                }
+                .backFront-list{
+                    justify-content:space-between;
+                }
+            }
+        }
+    }
+    
+    .resume{
+        h3{
+        font-size: 22px;
+        }
+        .resume__item{
+            .resume__item-site{
+                font-size:21px;
+            }
+            .resume__item-description{
+                font-size:14px;
+            }
+        }
+    }
+
+    .project{
+        .projects{
+            .project__introduction{
+                font-size:14px;
+                line-height: 1.2;
+            }
+            .project__introduction-subtitle{
+                font-size: 21px;
+            }
+            .project__container{
+                display:grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 20px;
+                .project__card{
+                    max-width: 300px;
+                    max-height: 340px;
+                    .project__card-content{
+                        .icon{
+                            fa-icon{
+                                font-size: 19px;
+                            }
+                            .margiin{
+                                    font-size:24px;
+                            }
+                        }
+                        h5{
+                            font-size:19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .contact{
+        .contact__description{
+            font-size:16px;
+        }
+        .contact__methods{
+            font-size:14px;
+            .contact__methods-box{
+                fa-icon{
+                    font-size: 16px;
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+    }
+}
+/****Medium devices  (tablets, 768 and up)***/
+@media only screen and (min-width: 768px){
+
+    .container-hero{
+        .hero1{
+            .name{
+                p{
+                    font-size:36px;
+                    transform: translate(50px,50px);
+                    width: 275px;
+                    animation: type 1s steps(13), blink .5s step-end infinite alternate;
+                    i{
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-nav-toogle{
+        .btn{
+            width: 50px;
+            height: 50px;
+            fa-icon{
+                font-size:30px;
+                font-weight:bold;
+            }
+            
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+    .navigation{
+        width: 40%;
+        .nav-image{
+            width:100px;
+            height: 100px;
+        }
+        .nav-text{
+            font-size: 24px;
+        }
+        .nav-contact{
+            fa-icon{
+                font-size: 22px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .nav-links{
+            a{
+                fa-icon{
+                    font-size: 22px;
+                    width: 38px;
+                    height: 38px;
+                }
+            }
+        }
+    }
+
+    .about{
+        .about__skills{
+            font-size: 23px;
+            .about__description{
+                    font-size:17px;
+                    line-height: 1.3;
+            }
+            .skills-p{
+                p{
+                    font-size: 17px;
+                }
+            }
+            .about__skills-soft, .about__skills-hard{
+                .skills-list{
+                    li{
+                    font-size:16px;
+                    }
+                }
+                .backFront-list{
+                    justify-content:space-around;
+                }
+            }
+        }
+    }
+    
+    .resume{
+        h3{
+        font-size: 23px;
+        }
+        .resume__item{
+            .resume__item-site{
+                font-size:22px;
+            }
+            .resume__item-description{
+                font-size:15px;
+            }
+        }
+    }
+
+    .project{
+        .projects{
+            .project__introduction{
+                font-size:15px;
+                line-height: 1.2;
+            }
+            .project__introduction-subtitle{
+                font-size: 22px;
+            }
+            .project__container{
+                display:grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 20px;
+                .project__card{
+                    max-width: 300px;
+                    max-height: 340px;
+                    
+                    .project__card-content{
+                        .project__card-btn{
+                            opacity: 0;
+                        }
+                        .icon{
+                            fa-icon{
+                                font-size: 20px;
+                            }
+                            .margiin{
+                                    font-size:25px;
+                            }
+                        }
+                        h5{
+                            font-size:20px;
+                        }
+                        &:hover{
+                            .project__card-btn{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .contact{
+        .contact__description{
+            font-size:17px;
+        }
+        .contact__methods{
+            font-size:15px;
+            .contact__methods-box{
+                fa-icon{
+                    font-size: 17px;
+                    width: 38px;
+                    height: 38px;
+                }
+            }
+        }
+        .contact__map{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            iframe{
+                width: 60%;
+                border-radius:50px;
+            }
+        }
+    }
+}
+/****Large devices (desktops, 992 and up)***/
+@media only screen and (min-width: 992px){
+    
+    .container-hero{
+        .hero1 {
+            width: 80%;
+            height: 96vh;
+            .name{
+                p{
+                    font-size:38px;
+                    transform: translate(50px,50px);
+                    width: 290px;
+                    animation: type 1.3s steps(15), blink .5s step-end infinite alternate;
+                    i{
+                        font-size: 38px;
+                    }
+                }
+            }
+        }
+        .hero2 {
+            width: 80%;
+        }
+
+        .btn__up-active > button{
+            transform:translateX(-240px);
+        }
+    }
+
+    .btn-nav-toogle{
+        display:none;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+    .container {
+        width: 80%;
+        transform: translateX(-13%);
+        margin-top:20px;
+    }
+
+    .navigation{
+        max-width: 20%;
+        transform: translateX(400%) !important;
+        .nav-image{
+            width:80px;
+            height: 80px;
+        }
+        .nav-text{
+            font-size: 20px;
+            margin:12px 0 12px 0;
+        }
+        .nav-contact{
+            justify-content:space-evenly;
+            fa-icon{
+                margin:10px 0 25px 0;
+            }
+        }
+    }
+
+    .about{
+        .about__skills{
+            font-size: 25px;
+            .about__description{
+                    font-size:19px;
+                    line-height: 1.3;
+            }
+            .skills-p{
+                p{
+                    font-size: 19px;
+                }
+            }
+            .about__skills-soft, .about__skills-hard{
+                .skills-list{
+                    li{
+                    font-size:18px;
+                    }
+                }
+            }
+                
+        }
+    }
+    
+    .resume{
+        h3{
+        font-size: 25px;
+        }
+        .resume__item{
+            .resume__item-site{
+                font-size:24px;
+    
+            }
+            .resume__item-description{
+                font-size:16px;
+            }
+        }
+    }
+
+    .project{
+        .projects{
+            .project__introduction{
+                font-size:17px;
+                line-height: 1.2;
+            }
+            .project__introduction-subtitle{
+                font-size: 23px;
+            }
+            .project__container{
+                grid-template-columns: repeat(3,1fr);
+                .project__card{
+                    .project__card-content{
+                        .icon{
+                            fa-icon{
+                                font-size: 21px;
+                            }
+                            .margiin{
+                                    font-size:26px;
+                            }
+                        }
+                        h5{
+                            font-size:21px;
+                        }
+                    }
+                }
+            }
+        }  
+    }
+    
+    .contact{
+        .contact__description{
+            font-size:18px;
+        }
+        .contact__methods{
+            font-size:16px;
+            .contact__methods-box{
+                fa-icon{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .footer {
+        transform: translateX(400%) !important;
+      }
+}
+/****Extra large devices (large desktops, 1200px and up)***/
+@media only screen and (min-width: 1200px){
+    
+    .container-hero{
+        .btn__up-active > button{
+            transform:translateX(-275px);
+        }
+    }
+}

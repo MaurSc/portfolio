@@ -62,6 +62,7 @@ export class NavigationComponent implements OnInit, OnChanges {
   }
   hideNavForL(e:any){
     e.target
+    console.log(e.target)
     this.hideNavFL.emit();
   }
 }

@@ -1,7 +1,8 @@
-<div class="container-hero" >
+
+<app-navigation (hideNavFL)="onHideNavFL()" [showing]="showNavBar"></app-navigation><div class="container-hero" >
     <div 
         class='hero1 '
-        
+        id="home"
     >
         <div class="name">
             <p><i>&lt;</i>Mauro Calvo<i>&#47;&gt;</i></p>
@@ -22,7 +23,6 @@
         
     </div>
     <div class='hero2'></div>
-    <app-navigation (hideNavFL)="onHideNavFL()" [showing]="showNavBar"></app-navigation>
 </div>
 
 
