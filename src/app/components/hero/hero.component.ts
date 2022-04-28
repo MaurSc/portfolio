@@ -9,7 +9,6 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 export class HeroComponent implements OnInit {
 showNavBar:boolean = false;
 hideNavFL:boolean = false;
-scrollBar?:string;
 
 arrowUp = faArrowUp;
 

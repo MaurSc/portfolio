@@ -10,17 +10,14 @@ import { faHouseChimney, faUser, faFile, faCode, faEnvelope } from '@fortawesome
   animations: [
     trigger('navAnimation', [
       state('hidde', style({
-        transform: 'translateX(0)',
-        transitionTimingFunction: 'ease-in-out'
+        transform: 'translateX(0)'
       })),
       state('show', style({
-        transform: 'translateX(-100%)',
-        transitionTimingFunction: 'ease-in-out'
+        transform: 'translateX(-100%)'
       })),
-      transition('* <=> *',[
+      transition('show <=> hidde',[
         animate ('0.5s')
       ]),
-
     ])
   ]
 })
@@ -31,7 +28,7 @@ export class NavigationComponent implements OnInit, OnChanges {
   linkedIn = faLinkedin;
   github = faGithub;
   active:boolean=true;  
-  navBar:string =this.showing? 'show' : 'hide';;
+  navBar:string ='hidde';
 
   home = faHouseChimney;
   about = faUser;
@@ -40,8 +37,6 @@ export class NavigationComponent implements OnInit, OnChanges {
   contact = faEnvelope;
 
   constructor() { }
-
-  
 
   ngOnInit(): void {
   
@@ -61,8 +56,6 @@ export class NavigationComponent implements OnInit, OnChanges {
     this.navBar = this.showing? 'show' : 'hide';
   }
   hideNavForL(e:any){
-    e.target
-    console.log(e.target)
     this.hideNavFL.emit();
   }
 }

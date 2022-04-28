@@ -4,7 +4,6 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    overflow-y: auto;
     user-select: none;
 }
 *, *:before, *:after {
@@ -987,11 +986,14 @@ body{
 }
 /****Large devices (desktops, 992 and up)***/
 @media only screen and (min-width: 992px){
+    html{
+        overflow-y: auto;
+    }
     
     .container-hero{
         .hero1 {
             width: 80%;
-            height: 96vh;
+            height: 93vh;
             .name{
                 p{
                     font-size:38px;
