@@ -54,16 +54,16 @@ body{
             
             p{
                 font-weight: bold;
-                font-size:21px;
+                font-size:23px;
                 color:white;
                 transform: translate(2px,20px);
                 border-right: 3px solid #18bdec;;
                 white-space: nowrap;
                 overflow: hidden;
-                width: 158px;
-                animation: type 1s steps(11), blink .5s step-end infinite alternate;
+                width: 175px;
+                animation: type 1s steps(12), blink .5s step-end infinite alternate;
                 i{
-                    font-size: 20px; 
+                    font-size: 22px; 
                     font-weight: normal;
                     color:rgb(236,97,91);
                }
@@ -166,7 +166,7 @@ body{
         border-radius:50%;
     }
     .nav-text{
-        font-size: 20px;
+        font-size: 22px;
         margin:4px 0 4px 0;
         font-weight: bold;
         color:white;
@@ -176,7 +176,7 @@ body{
         justify-content: center;
 
         fa-icon{
-            font-size: 18px;
+            font-size: 20px;
             display: inline-block;
             background: #212431;
             color: #fff;
@@ -185,8 +185,8 @@ body{
             margin:0 4px 15px 0;
             border-radius: 50%;
             text-align: center;
-            width: 36px;
-            height: 36px;
+            width: 38px;
+            height: 38px;
             transition: 0.3s;
             &:hover{
                 cursor: pointer;
@@ -204,7 +204,7 @@ body{
             margin:0 3px 20px 7px;
             color:rgba(179,201,230,0.60);
             fa-icon{
-                font-size: 18px;
+                font-size: 20px;
                 display: inline-block;
                 color: #fff;
                 width: 36px;
@@ -227,14 +227,14 @@ body{
 .about{
     
     .about__skills{
-        font-size: 18px;
+        font-size: 20px;
         font-weight: bold;
         margin-bottom: 16px;
         margin-top:0;
         position: relative;
         color: #173b6c;
         .about__description{
-                font-size:14px;
+                font-size:16px;
                 line-height: 1.2;
                 color: #040b14;
         }
@@ -245,7 +245,7 @@ body{
             justify-content: flex-start;
             color:rgba(#040b14, .5);
             p{
-                font-size: 16px; 
+                font-size: 18px; 
                 margin: 0 10px 0 10px;
             }
             &:after {
@@ -260,7 +260,7 @@ body{
                 padding-left: 0;
                 li{
                 list-style: none;
-                font-size:14px;
+                font-size:16px;
                 font-weight: normal;
                 color:black;
                 padding-bottom:5px;
@@ -273,7 +273,7 @@ body{
                 span{
                     font-weight: bold; 
                     color: #173b6c;
-                    font-size:18px;
+                    font-size:20px;
                 }
             }
             .backFront-list{
@@ -290,7 +290,7 @@ body{
 .resume{
        
     h3{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     margin: 20px 0 15px 0;
     position: relative;
@@ -317,7 +317,7 @@ body{
             
         .resume__item-site{
             margin:0 0 15px 0;
-            font-size:19px;
+            font-size:21px;
 
         }
         .resume__item-date{
@@ -325,7 +325,7 @@ body{
             margin-top: 0;
         }
         .resume__item-description{
-            font-size:12px;
+            font-size:14px;
             line-height: 1.3;
             span{
                 font-weight:bold;
@@ -341,11 +341,11 @@ body{
     .projects{
 
         .project__introduction{
-            font-size:12px;
+            font-size:14px;
             line-height: 1;
         }
         .project__introduction-subtitle{
-            font-size: 18px;
+            font-size: 20px;
             text-align: center;
             font-weight: bold;
             margin: 20px 0 15px 0;
@@ -374,26 +374,26 @@ body{
                         color:#3568ab;
                         
                         fa-icon{
-                            font-size: 17px;
+                            font-size: 19px;
                             padding:0 6px 0 6px;
                             transition: all 2s ease-in-out;
                             
                         }
                         .margiin{
-                                font-size:22px;
+                                font-size:24px;
                                 font-weight:bold;
                                 transition: all 0.8s ease-in-out;
                             }
                     }
                     h5{
-                        font-size:15px;
+                        font-size:17px;
                         font-weight:bold;
                         margin: 15px 0 15px 0;
                         transition: all 2s ease-in-out;
                     }
                     .text_after{
                         opacity: 0;
-                        font-size:12px;
+                        font-size:14px;
                         font-weight:bold;
                         margin:0;
                         transition: all 2s ease-in-out;
@@ -401,7 +401,7 @@ body{
                     }
                     p{
                         margin-top:0;
-                        font-size:12px; 
+                        font-size:14px; 
                         transition: all 2s ease-in-out;
                     }
                     .project__card-btn{
@@ -413,7 +413,7 @@ body{
                             padding:5px 0 5px 0;
                             transition: all 7s ease-in;
                             a{
-                                font-size:16px;
+                                font-size:18px;
                                 color: #3568ab;
                                 text-decoration:none;
                                 
@@ -466,36 +466,24 @@ body{
     }
 }
 
-/*
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-@media (min-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-*/
 /*============================
     Contact
 ==============================*/
 .contact{
     .contact__description{
-        font-size:14px;
+        font-size:16px;
         line-height: 1;
     }
     
     .contact__methods{
-        font-size:12px;
+        font-size:14px;
         line-height: 1;
         .contact__methods-box{
             display: flex;
             align-items:center;
             margin-bottom: 18px;
             fa-icon{
-                font-size: 14px;
+                font-size: 16px;
                 display: inline-block;
                 background: #212431;
                 color: #fff;
@@ -588,14 +576,14 @@ body{
     z-index: 2;
     .btn{
         margin:20px 15px 0 0;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height:50px;
         border:none;
         border-radius: 50px;
         background-color: #149ddd;
         color:white;
         fa-icon{
-            font-size:20px;
+            font-size:30px;
             font-weight:bold;
         }
         
@@ -611,7 +599,7 @@ body{
     Section-title
 ==============================*/
 .section-title h2 {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 16px;
     margin-top:0;
@@ -637,26 +625,6 @@ body{
 
 /********portrait phones, less than 320px DEFAULT(Mobile First)***********/
 
-/****Small devices (portrait phones, 321--575)***/
-@media only screen and (min-width: 320px){
-
-    .container-hero{
-        .hero1{
-            .name{
-                p{
-                    font-size:27px;
-                    transform: translate(50px,20px);
-                    width: 205px;
-                    animation: type 1s steps(11), blink .5s step-end infinite alternate;
-                    i{
-                        font-size: 27px;
-                    }
-                }
-            }
-        }
-        
-    }
-}
 /****Medium devices  (landscape phones, 576 and up)***/
 @media only screen and (min-width: 576px){
 
