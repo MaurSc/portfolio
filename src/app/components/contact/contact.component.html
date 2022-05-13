@@ -21,5 +21,34 @@
                 <div class="contact__methods-text"> <span>Ubicacion:</span> <p>Lomas de Zamora Bs As</p> </div>
             </div>
         </div>
+        <form class="formulario" action="#" disabled>
+            <legend>Puedes enviarme un mensaje!</legend>
+
+            <div class="contenedor-campos">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="tel">Teléfono</label>
+
+                    <input type="tel" id="tel" name="telefono">
+                </div>
+                <div class="campo w-100">
+                    <label for="correo">Correo</label>
+
+                    <input type="mail" name="correo" id="correo" required>
+                </div>
+                <div class="campo w-100">
+                    <label for="mensaje">Mensaje:</label>
+
+                    <textarea id="mensaje"></textarea>
+                </div>
+            </div><!--.contenedor-campos-->
+            <div class="enviar">
+                <input class="boton" type="submit" value="Enviar" >
+            </div>
+        </form>
     </div>
 </div>

@@ -4,7 +4,7 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    user-select: none;
+    /* user-select: none; */
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -54,13 +54,13 @@ body{
             
             p{
                 font-weight: bold;
-                font-size:23px;
+                font-size:26px;
                 color:white;
                 transform: translate(2px,20px);
                 border-right: 3px solid #18bdec;;
                 white-space: nowrap;
                 overflow: hidden;
-                width: 175px;
+                width: 220px;
                 animation: type 1s steps(12), blink .5s step-end infinite alternate;
                 i{
                     font-size: 22px; 
@@ -514,12 +514,75 @@ body{
             }
         }
     }
-    .contact__map{
-        iframe{
-            border-radius:50px;
-        }
-       
+    
+.formulario {
+    background-color: rgba(80,80,80, .3);
+    padding: 20px;
+    border-radius: 10px;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    legend {
+        text-align: center;
+        text-decoration: underline;
+        font-size: 18px;
+        margin-bottom: 20px;
+        display: block;
+        font-weight: 700;
     }
+    .contenedor-campos {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .campo {
+            margin-bottom: 10px;
+            width: 100%;
+            label {
+                font-weight: 700;
+                margin-bottom: 5px;
+                display: block;
+            }
+            input[type="text"],
+            input[type="tel"],
+            input[type="mail"],
+            textarea {
+                width: 100%;
+                padding: 5px;
+                border: none;
+                border-radius: 5px;
+                height: 30px;
+            }
+            textarea{
+                max-width:760px;
+                height: 150px;
+            }
+        }
+        .w-100{
+            flex: 0 0 100%;
+        }
+    }
+    .enviar {
+        display: flex;
+        justify-content: center;
+
+        .boton {
+            background-color: rgba( #149ddd, .3);
+            margin-top: 5px;
+            padding: 20px 40px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            border:none;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        
+    }
+}
+
+
     
 }
 
@@ -634,7 +697,7 @@ body{
                 p{
                     font-size:30px;
                     transform: translate(40px,70px);
-                    width: 230px;
+                    width: 260px;
                     animation: type 1s steps(13), blink .5s step-end infinite alternate;
                     i{
                         font-size: 30px;
@@ -790,7 +853,7 @@ body{
                 p{
                     font-size:36px;
                     transform: translate(50px,50px);
-                    width: 275px;
+                    width: 310px;
                     animation: type 1s steps(13), blink .5s step-end infinite alternate;
                     i{
                         font-size: 36px;
@@ -950,6 +1013,25 @@ body{
                 border-radius:50px;
             }
         }
+        .formulario {
+            legend{
+                text-align: start;
+            }
+            max-width: 800px;
+            margin: 0 auto;
+            .campo{
+                    flex: 0 0 calc(50% - 5px)
+            }
+    
+            :is(.campo) :is( 
+            input[type="text"], 
+            input[type="text"],  
+            input[type="tel"],  
+            input[type="mail"] , 
+            textarea ) {
+            flex: 1;
+            }
+        }
     }
 }
 /****Large devices (desktops, 992 and up)***/
@@ -966,7 +1048,7 @@ body{
                 p{
                     font-size:38px;
                     transform: translate(50px,50px);
-                    width: 290px;
+                    width: 330px;
                     animation: type 1.3s steps(15), blink .5s step-end infinite alternate;
                     i{
                         font-size: 38px;
