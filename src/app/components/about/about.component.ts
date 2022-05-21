@@ -1,6 +1,9 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
+import {MatDialog} from '@angular/material/dialog';
+import { ModalComponent } from '../modal/modal.component';
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -23,13 +26,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 enter:string = 'out';
-  constructor() { }
 
-  ngOnInit(): void {
+constructor(public dialog : MatDialog){}
+
+ngOnInit(): void {
   }
-
+  
+openDialog( tec: String ){
+  this.dialog.open(ModalComponent,{
+    data: tec,
+  });
+ 
+}
   onIntersection({ visible }: { visible: boolean }): void {
     this.enter = visible ? 'in' : 'out';
   }
-
 }

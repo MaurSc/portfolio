@@ -22,7 +22,7 @@ import { faHouseChimney, faUser, faFile, faCode, faEnvelope } from '@fortawesome
   ]
 })
 export class NavigationComponent implements OnInit, OnChanges {
-  @Input() showing!: boolean;
+  @Input() showing: boolean = false;
   @Output() hideNavFL=new EventEmitter();
 
   linkedIn = faLinkedin;

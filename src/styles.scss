@@ -1,6 +1,8 @@
 /*============================
     Globals
 ==============================*/
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -32,6 +34,23 @@ body{
     &:first-child{
         margin-top:20px;
     }
+}
+
+.container-modal{
+    width:50%;
+    height:auto;
+    background-color: rgba(#149ddd,0.23);
+    box-shadow: 2px 2px 4px 4px rgba(179,201,230,0.60);
+    margin-top:25px;
+    border-radius: 10px;
+    text-align:center;
+    transition: all 1s ease-in-out;
+    &:hover{
+        cursor:pointer;
+        box-shadow: 2px 2px 4px 4px #149ddd;
+        transform:scale(1.2);
+    }
+
 }
 /*============================
     Hero
@@ -277,9 +296,16 @@ body{
                 }
             }
             .backFront-list{
-                display:flex;
-                justify-content:space-between;
-            }
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .front-end{
+                    margin-left:30%;
+                }
+                .back-end{
+                    margin-right:30%;
+                }
+            } 
         }
             
     }
