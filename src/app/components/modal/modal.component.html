@@ -1,5 +1,29 @@
 <mat-dialog-content class="mat-typography">
   <h3>{{message}}</h3>
+  <ul *ngIf="message == 'Front-End'">
+    <li><span>&rsaquo;</span> HTML5</li>
+    <li><span>&rsaquo;</span> CSS3</li>
+    <li><span>&rsaquo;</span> Sass</li>
+    <li><span>&rsaquo;</span> Bootstrap</li>
+    <li><span>&rsaquo;</span>JavaScript</li>
+    <li><span>&rsaquo;</span> Angular</li>
+    <li><span>&rsaquo;</span> Jquery</li>
+    <li><span>&rsaquo;</span> TypeScript</li>
+  </ul>
+  <ul *ngIf="message == 'Back-End'">
+    <li><span>&rsaquo;</span> SQL</li>
+    <li><span>&rsaquo;</span> MySQL</li>
+    <li><span>&rsaquo;</span> Java</li>
+    <li><span>&rsaquo;</span> Springboot</li>
+    <li><span>&rsaquo;</span> JPA</li>
+    <li><span>&rsaquo;</span> hibernate</li>
+
+  </ul>
+  <ul *ngIf="message == 'Other'">
+    
+    <li><span>&rsaquo;</span> Git</li>
+    <li><span>&rsaquo;</span> GitHub</li>
+  </ul>
 </mat-dialog-content>
 <mat-dialog-actions align="center">
   <button mat-button mat-dialog-close>X</button>

@@ -8,7 +8,9 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
+  
   tecnologia:String = this.message;
+
   constructor( 
     public dialogRef : MatDialogRef<ModalComponent>, 
     @Inject(MAT_DIALOG_DATA) public message : String
