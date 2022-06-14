@@ -16,7 +16,7 @@ body{
     color:#212431;
     font-family: "Open Sans", sans-serif;
     a{
-        text-decoration: none
+        text-decoration: none;
     }
 }
     
@@ -585,13 +585,20 @@ body{
         .w-100{
             flex: 0 0 100%;
         }
+        .isValid{
+
+        }
+        .isInvalid{
+            
+        }
     }
     .enviar {
         display: flex;
         justify-content: center;
 
         .boton {
-            background-color: rgba( #149ddd, .3);
+            background-color: rgba( #149ddd, .7);
+            color: white;
             margin-top: 5px;
             padding: 20px 40px;
             border-radius: 5px;
@@ -604,7 +611,6 @@ body{
                 cursor: pointer;
             }
         }
-        
     }
 }
 
@@ -640,7 +646,8 @@ body{
         color: #eaebf0;
         p{
             margin:0;
-            span{
+            a{
+                color:white;
                 font-weight:bold;
                 font-size:16px;
             }
@@ -953,7 +960,15 @@ body{
                     }
                 }
                 .backFront-list{
-                    justify-content:space-around;
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
+                    padding-left:17% ;
+                    .front-end{
+                        margin-left:0;
+                    }
+                    .back-end{
+                        margin-right:0;
+                    }
                 }
             }
         }

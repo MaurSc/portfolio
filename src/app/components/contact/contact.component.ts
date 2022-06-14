@@ -1,7 +1,8 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
 
-import { faPhone, faEnvelope, faLocationDot, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',

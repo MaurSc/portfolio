@@ -5,6 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InViewportModule } from 'ng-in-viewport';
 import { MatDialogModule} from '@angular/material/dialog';
 import { MatButtonModule} from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,6 +20,9 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { Page404Component } from './components/page404/page404.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,10 @@ import { ModalComponent } from './components/modal/modal.component';
     ProjectsComponent,
     ContactComponent,
     FooterComponent,
-    ModalComponent
+    ModalComponent,
+    Page404Component,
+    PortfolioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +47,8 @@ import { ModalComponent } from './components/modal/modal.component';
     BrowserAnimationsModule,
     InViewportModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   entryComponents: [ModalComponent],
   providers: [],

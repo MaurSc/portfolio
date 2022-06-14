@@ -1,5 +1,5 @@
-<mat-dialog-content class="mat-typography">
-  <h3>{{message}}</h3>
+<mat-dialog-content >
+  <h2>{{message}}</h2>
   <ul *ngIf="message == 'Front-End'">
     <li><span>&rsaquo;</span> HTML5</li>
     <li><span>&rsaquo;</span> CSS3</li>
@@ -19,12 +19,12 @@
     <li><span>&rsaquo;</span> hibernate</li>
 
   </ul>
-  <ul *ngIf="message == 'Other'">
+  <ul *ngIf="message == 'Otros'">
     
     <li><span>&rsaquo;</span> Git</li>
     <li><span>&rsaquo;</span> GitHub</li>
   </ul>
 </mat-dialog-content>
 <mat-dialog-actions align="center">
-  <button mat-button mat-dialog-close>X</button>
+  <button class="btnn" mat-button mat-dialog-close><span>X</span></button>
 </mat-dialog-actions>

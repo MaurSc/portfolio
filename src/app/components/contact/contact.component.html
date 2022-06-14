@@ -11,41 +11,21 @@
         <div class="contact__description">
             <p>Para ponerte en contacto conmigo, podes hacerlo del siguiente modo</p>
         </div>
-        <div class="contact__methods">
-            <div class="contact__methods-box">
-                <fa-icon class="btn" [icon]="phone"></fa-icon>
-                <div class="contact__methods-text"> <span>Telefono:</span> <p>11 6614 9940</p> </div>
-            </div>
-            <div class="contact__methods-box">
-                <fa-icon class="btn" [icon]="location"></fa-icon>
-                <div class="contact__methods-text"> <span>Ubicacion:</span> <p>Lomas de Zamora Bs As</p> </div>
-            </div>
-        </div>
         <form class="formulario" action="#" disabled>
-            <legend>Puedes enviarme un mensaje!</legend>
-
             <div class="contenedor-campos">
-                <div class="campo">
+                <div class="campo ">
                     <label for="nombre">Nombre</label>
-
                     <input type="text" name="nombre" id="nombre" required>
                 </div>
-                <div class="campo">
-                    <label for="tel">Teléfono</label>
-
-                    <input type="tel" id="tel" name="telefono">
-                </div>
-                <div class="campo w-100">
+                <div class="campo ">
                     <label for="correo">Correo</label>
-
                     <input type="mail" name="correo" id="correo" required>
                 </div>
                 <div class="campo w-100">
                     <label for="mensaje">Mensaje:</label>
-
                     <textarea id="mensaje"></textarea>
                 </div>
-            </div><!--.contenedor-campos-->
+            </div>
             <div class="enviar">
                 <input class="boton" type="submit" value="Enviar" >
             </div>
